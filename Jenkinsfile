@@ -10,12 +10,12 @@ node {
 
        stage('Compiling'){
 
-          sh 'mvn deploy'
+          bat 'mvn install'
        }
 	   
       stage('Sonar') {
                     //add stage sonar
-                    sh 'mvn sonar:sonar'
+                    bat 'mvn sonar:sonar'
                 }
        
 }
