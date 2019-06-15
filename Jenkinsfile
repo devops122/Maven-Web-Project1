@@ -12,7 +12,10 @@ node {
 
           bat 'mvn package'
        }
-	   
+      stage('UploadArtifactIntoNexus') {
+ 
+    sh "${mavenHome}/bin/mvn deploy"
+}   
      
        
 }
