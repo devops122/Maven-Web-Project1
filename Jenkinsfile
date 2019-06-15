@@ -14,7 +14,7 @@ node {
        }
       stage('UploadArtifactIntoNexus') {
  
-          sh   'mvn deploy'
+          bat   'mvn deploy'
 }   
      
        
