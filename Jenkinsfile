@@ -14,7 +14,7 @@ node {
        }
       stage('UploadArtifactIntoNexus') {
  
-    sh "${mavenHome}/bin/mvn deploy"
+          sh   'mvn deploy'
 }   
      
        
