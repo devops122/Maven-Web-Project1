@@ -19,7 +19,7 @@
 	    <spring.version>4.1.4.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-	 	<sonar.host.url>http://localhost:9001/</sonar.host.url>
+	 	<sonar.host.url>http://localhost:9000/</sonar.host.url>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
@@ -32,15 +32,15 @@
   </properties>
 
     <scm>
-        <connection>scm:git:https://github.com/devopstrainingblr/Maven-Web-Project</connection>
-        <developerConnection>scm:git:https://github.com/devopstrainingblr/Maven-Web-Project</developerConnection>
+        <connection>scm:git:https://github.com/devops122/Maven-Web-Project</connection>
+        <developerConnection>scm:git:https://github.com/devops122/Maven-Web-Project</developerConnection>
         <tag>HEAD</tag>
-        <url>https://github.com/devopstrainingblr/Maven-Web-Project</url>
+        <url>https://github.com/devops122/Maven-Web-Project</url>
     </scm>
 	
     <issueManagement>
         <system>GitHub</system>
-        <url>https://github.com/devopstrainingblr/Maven-Web-Project/issues</url>
+        <url>https://github.com/devops122/Maven-Web-Project/issues</url>
     </issueManagement>
 	
 	
@@ -96,6 +96,22 @@
 			<version>${spring.version}</version>
 		</dependency>
   </dependencies>
+	
+	
+	
+     <distributionManagement>
+	    <repository>
+	      <id>nexus</id>
+	      <name>Mithun Technologies Releases Nexus Repository</name>
+	      <url>http://localhost:8081/repository/siva-technologies-releases/</url>
+	    </repository>
+	    <snapshotRepository>
+	      <id>nexus</id>
+	      <name>Mithun Technologies Snapshot Nexus Repository </name>
+	      <url>http://localhost:8081/repository/siva-technologies-snapshots/</url>
+	    </snapshotRepository>
+     </distributionManagement>
+	
 
   <build>
     <plugins>
