@@ -13,9 +13,6 @@ node {
           bat 'mvn package'
        }
 	   
-      stage('Sonar') {
-                    //add stage sonar
-                    bat 'mvn sonar:sonar'
-                }
+     
        
 }
