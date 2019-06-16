@@ -17,23 +17,23 @@ node('master'){
  
  stage('Build')
  {
-  sh  "${mavenHome}/bin/mvn clean package"
+  bat  "${mavenHome}/bin/mvn clean package"
  }
  
  stage('SonarQube Report')
  {
-  sh  "${mavenHome}/bin/mvn sonar:sonar"
+  bat  "${mavenHome}/bin/mvn sonar:sonar"
  }
    
   
   stage('Upload Artifacts into Nexus')
  {
-  sh  "${mavenHome}/bin/mvn deploy"
+  bat  "${mavenHome}/bin/mvn deploy"
  }
  
  stage('DeplotoTomcat'){
      
-     sh "cp $WORKSPACE/target/*.war /opt/apache-tomcat-9.0.16/webapps/"
+     bat "cp $WORKSPACE/target/*.war /opt/apache-tomcat-9.0.16/webapps/"
  }
  
 }
