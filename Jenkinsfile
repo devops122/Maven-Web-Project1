@@ -19,7 +19,13 @@ node('master'){
  {
   bat  "${mavenHome}/bin/mvn clean package"
  }
- stage('DeplotoTomcat'){
+     
+   stage('Upload Artifacts into Nexus')
+ {
+   bat "${mavenHome}/bin/mvn deploy"
+ }
+
+    stage('DeplotoTomcat'){
      
      bat "copy C:\\Users\\Cartinn\\.jenkins\\workspace\\pipeline_example\\target\\maven-web-project-1.0-SNAPSHOT.war C:\\Devops\\apache-tomcat-7.0.94\\webapps\\"
  }
