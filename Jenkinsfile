@@ -22,7 +22,7 @@ node('master'){
  
    stage('DeplotoTomcat'){
      
-     bat "cp $WORKSPACE\pipeline example\target\*.war \Devops\apache-tomcat-7.0.94\webapps\"
+     bat "copy $WORKSPACE\pipeline example\target\*.war \Devops\apache-tomcat-7.0.94\webapps\"
  }
  
  
