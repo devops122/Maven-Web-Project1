@@ -103,12 +103,12 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Releases Nexus Repository</name>
-	      <url>http://localhost:8081/repository/siva-technologies-releases/</url>
+	      <url>http://localhost:8081/repository/siva-technologies/</url>
 	    </repository>
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Snapshot Nexus Repository </name>
-	      <url>http://localhost:8081/repository/siva-technologies-snapshots/</url>
+	      <url>http://localhost:8081/repository/siva-technologies/</url>
 	    </snapshotRepository>
      </distributionManagement>
 	
