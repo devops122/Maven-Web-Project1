@@ -21,9 +21,5 @@ node('master'){
  }
  
  
- stage('DeplotoTomcat'){
-     
-     bat "copy  $workspace\pipeline example\target\maven-web-project-1.0-SNAPSHOT.war  C:\Devops\apache-tomcat-7.0.94\webapps\"
- }
  
 }
