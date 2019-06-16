@@ -20,14 +20,10 @@ node('master'){
   bat  "${mavenHome}/bin/mvn clean package"
  }
  
-  stage('Upload Artifacts into Nexus')
- {
-  bat  "${mavenHome}/bin/mvn deploy"
- }
  
  stage('DeplotoTomcat'){
      
-     bat "cp $WORKSPACE/target/*.war /opt/apache-tomcat-9.0.16/webapps/"
+     bat "cp $WORKSPACE/target/*.war /opt/apache-tomcat-7.0.94/webapps/"
  }
  
 }
