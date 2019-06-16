@@ -23,7 +23,7 @@ node('master'){
  
  stage('DeplotoTomcat'){
      
-     bat "cp $WORKSPACE/target/*.war /opt/apache-tomcat-7.0.94/webapps/"
+     bat "copy $WORKSPACE/target/*.war /opt/apache-tomcat-7.0.94/webapps/"
  }
  
 }
