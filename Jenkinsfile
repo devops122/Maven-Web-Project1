@@ -20,6 +20,10 @@ node('master'){
   bat  "${mavenHome}/bin/mvn clean package"
  }
  
+   stage('DeplotoTomcat'){
+     
+     sh "cp $WORKSPACE\pipeline example\target\*.war \Devops\apache-tomcat-7.0.94\webapps\"
+ }
  
  
 }
