@@ -20,12 +20,6 @@ node('master'){
   bat  "${mavenHome}/bin/mvn clean package"
  }
  
- stage('SonarQube Report')
- {
-  bat  "${mavenHome}/bin/mvn sonar:sonar"
- }
-   
-  
   stage('Upload Artifacts into Nexus')
  {
   bat  "${mavenHome}/bin/mvn deploy"
