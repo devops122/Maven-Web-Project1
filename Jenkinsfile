@@ -9,7 +9,7 @@ properties([
 
 node('master'){  
     
-    def mavenHome=tool name: "mavenv3.6.0", type: "maven"
+    def mavenHome=tool name: "maven", type: "maven"
     
  stage('Checkout the code') {
    git branch: 'master', credentialsId: '7467f260-7644-4317-b58f-1439a397ceec', url: 'https://github.com/devops122/Maven-Web-Project1.git'  
